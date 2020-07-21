@@ -3,6 +3,7 @@
 rust_defaults {
     name: "futures-io_defaults",
     crate_name: "futures_io",
+    srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -15,13 +16,11 @@ rust_defaults {
 rust_test_host {
     name: "futures-io_host_test_src_lib",
     defaults: ["futures-io_defaults"],
-    srcs: ["src/lib.rs"],
 }
 
 rust_test {
     name: "futures-io_device_test_src_lib",
     defaults: ["futures-io_defaults"],
-    srcs: ["src/lib.rs"],
 }
 
 rust_library {
